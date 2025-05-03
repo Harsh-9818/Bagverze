@@ -12,7 +12,7 @@ const db = require('./config/mongoose-connection.js');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, 'public'))); 
 app.set('view engine', 'ejs');
 
 app.use("/owners", ownerRouter);
